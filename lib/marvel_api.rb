@@ -2,6 +2,12 @@ require_relative 'marvel/client'
 
 module Marvel
   class << self
+
+    attr_accessor :api_key, :private_key
+
+    def configure(&block)
+      yield self
+    end
     # Alias for Marvel::Client.new
     # @return [Marvel::Client]
     def new

@@ -4,13 +4,8 @@ module Marvel
     attr_accessor :api_key, :private_key
 
     def configure
-      yield self
-    end
-
-    def reset
-      self.api_key = nil
-      self.private_key = nil
-      self
+      self.api_key = Marvel.api_key
+      self.private_key = Marvel.private_key
     end
   end
 end

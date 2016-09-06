@@ -13,7 +13,7 @@ module Marvel
     include Marvel::Configuration
 
     def initialize
-      reset
+      configure
     end
 
     # Requests on the server side must be of the form
